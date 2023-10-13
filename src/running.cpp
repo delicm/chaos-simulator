@@ -7,6 +7,8 @@ void ChaosSimulator::display() {
 
     displayStatics();
 
+    displayText();
+
     displayAnchors();
 
     displayMarker();
@@ -21,6 +23,14 @@ void ChaosSimulator::displayStatics() {
 
     StaticTexture.update(StaticImage);
     Window.draw(StaticSprite);
+
+}
+
+
+
+void ChaosSimulator::displayText() {
+
+    Window.draw(TPSIndicator);
 
 }
 

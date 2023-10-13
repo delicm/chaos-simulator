@@ -29,9 +29,12 @@ private:
     const int POINT_R = 2;
 
     unsigned int TPS = 0;
+    unsigned int BASE_TPS = 10;
+    const int MAX_TPS = 80;
 
     /*** Running ***/
     void displayStatics();
+    void displayText();
     void displayAnchors();
     void displayMarker();
     void display();
@@ -53,6 +56,9 @@ private:
     sf::Image StaticImage;
     sf::Texture StaticTexture;
     sf::Sprite StaticSprite;
+
+    sf::Text TPSIndicator;
+    sf::Font DisplayFont;
 
 public:
 
