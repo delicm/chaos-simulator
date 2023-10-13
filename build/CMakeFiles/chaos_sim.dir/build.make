@@ -97,10 +97,24 @@ CMakeFiles/chaos_sim.dir/src/action_handling.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chaos_sim.dir/src/action_handling.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mdelic/Main/Programs/PersonalProjects/Chaos/src/action_handling.cpp -o CMakeFiles/chaos_sim.dir/src/action_handling.cpp.s
 
+CMakeFiles/chaos_sim.dir/src/tick_handling.cpp.o: CMakeFiles/chaos_sim.dir/flags.make
+CMakeFiles/chaos_sim.dir/src/tick_handling.cpp.o: /home/mdelic/Main/Programs/PersonalProjects/Chaos/src/tick_handling.cpp
+CMakeFiles/chaos_sim.dir/src/tick_handling.cpp.o: CMakeFiles/chaos_sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mdelic/Main/Programs/PersonalProjects/Chaos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/chaos_sim.dir/src/tick_handling.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chaos_sim.dir/src/tick_handling.cpp.o -MF CMakeFiles/chaos_sim.dir/src/tick_handling.cpp.o.d -o CMakeFiles/chaos_sim.dir/src/tick_handling.cpp.o -c /home/mdelic/Main/Programs/PersonalProjects/Chaos/src/tick_handling.cpp
+
+CMakeFiles/chaos_sim.dir/src/tick_handling.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chaos_sim.dir/src/tick_handling.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mdelic/Main/Programs/PersonalProjects/Chaos/src/tick_handling.cpp > CMakeFiles/chaos_sim.dir/src/tick_handling.cpp.i
+
+CMakeFiles/chaos_sim.dir/src/tick_handling.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chaos_sim.dir/src/tick_handling.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mdelic/Main/Programs/PersonalProjects/Chaos/src/tick_handling.cpp -o CMakeFiles/chaos_sim.dir/src/tick_handling.cpp.s
+
 CMakeFiles/chaos_sim.dir/src/running.cpp.o: CMakeFiles/chaos_sim.dir/flags.make
 CMakeFiles/chaos_sim.dir/src/running.cpp.o: /home/mdelic/Main/Programs/PersonalProjects/Chaos/src/running.cpp
 CMakeFiles/chaos_sim.dir/src/running.cpp.o: CMakeFiles/chaos_sim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mdelic/Main/Programs/PersonalProjects/Chaos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/chaos_sim.dir/src/running.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mdelic/Main/Programs/PersonalProjects/Chaos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/chaos_sim.dir/src/running.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chaos_sim.dir/src/running.cpp.o -MF CMakeFiles/chaos_sim.dir/src/running.cpp.o.d -o CMakeFiles/chaos_sim.dir/src/running.cpp.o -c /home/mdelic/Main/Programs/PersonalProjects/Chaos/src/running.cpp
 
 CMakeFiles/chaos_sim.dir/src/running.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/chaos_sim.dir/src/running.cpp.s: cmake_force
 CMakeFiles/chaos_sim.dir/src/main.cpp.o: CMakeFiles/chaos_sim.dir/flags.make
 CMakeFiles/chaos_sim.dir/src/main.cpp.o: /home/mdelic/Main/Programs/PersonalProjects/Chaos/src/main.cpp
 CMakeFiles/chaos_sim.dir/src/main.cpp.o: CMakeFiles/chaos_sim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mdelic/Main/Programs/PersonalProjects/Chaos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/chaos_sim.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mdelic/Main/Programs/PersonalProjects/Chaos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/chaos_sim.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chaos_sim.dir/src/main.cpp.o -MF CMakeFiles/chaos_sim.dir/src/main.cpp.o.d -o CMakeFiles/chaos_sim.dir/src/main.cpp.o -c /home/mdelic/Main/Programs/PersonalProjects/Chaos/src/main.cpp
 
 CMakeFiles/chaos_sim.dir/src/main.cpp.i: cmake_force
@@ -129,6 +143,7 @@ CMakeFiles/chaos_sim.dir/src/main.cpp.s: cmake_force
 chaos_sim_OBJECTS = \
 "CMakeFiles/chaos_sim.dir/src/core.cpp.o" \
 "CMakeFiles/chaos_sim.dir/src/action_handling.cpp.o" \
+"CMakeFiles/chaos_sim.dir/src/tick_handling.cpp.o" \
 "CMakeFiles/chaos_sim.dir/src/running.cpp.o" \
 "CMakeFiles/chaos_sim.dir/src/main.cpp.o"
 
@@ -137,6 +152,7 @@ chaos_sim_EXTERNAL_OBJECTS =
 
 /home/mdelic/Main/Programs/PersonalProjects/Chaos/bin/chaos_sim: CMakeFiles/chaos_sim.dir/src/core.cpp.o
 /home/mdelic/Main/Programs/PersonalProjects/Chaos/bin/chaos_sim: CMakeFiles/chaos_sim.dir/src/action_handling.cpp.o
+/home/mdelic/Main/Programs/PersonalProjects/Chaos/bin/chaos_sim: CMakeFiles/chaos_sim.dir/src/tick_handling.cpp.o
 /home/mdelic/Main/Programs/PersonalProjects/Chaos/bin/chaos_sim: CMakeFiles/chaos_sim.dir/src/running.cpp.o
 /home/mdelic/Main/Programs/PersonalProjects/Chaos/bin/chaos_sim: CMakeFiles/chaos_sim.dir/src/main.cpp.o
 /home/mdelic/Main/Programs/PersonalProjects/Chaos/bin/chaos_sim: CMakeFiles/chaos_sim.dir/build.make
@@ -144,7 +160,7 @@ chaos_sim_EXTERNAL_OBJECTS =
 /home/mdelic/Main/Programs/PersonalProjects/Chaos/bin/chaos_sim: /home/mdelic/Software/C-Includes/SFML/SFML-2.6.0/lib/libsfml-window-d.so.2.6.0
 /home/mdelic/Main/Programs/PersonalProjects/Chaos/bin/chaos_sim: /home/mdelic/Software/C-Includes/SFML/SFML-2.6.0/lib/libsfml-system-d.so.2.6.0
 /home/mdelic/Main/Programs/PersonalProjects/Chaos/bin/chaos_sim: CMakeFiles/chaos_sim.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mdelic/Main/Programs/PersonalProjects/Chaos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable /home/mdelic/Main/Programs/PersonalProjects/Chaos/bin/chaos_sim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mdelic/Main/Programs/PersonalProjects/Chaos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable /home/mdelic/Main/Programs/PersonalProjects/Chaos/bin/chaos_sim"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/chaos_sim.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

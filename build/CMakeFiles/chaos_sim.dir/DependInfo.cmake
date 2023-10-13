@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/mdelic/Main/Programs/PersonalProjects/Chaos/src/core.cpp" "CMakeFiles/chaos_sim.dir/src/core.cpp.o" "gcc" "CMakeFiles/chaos_sim.dir/src/core.cpp.o.d"
   "/home/mdelic/Main/Programs/PersonalProjects/Chaos/src/main.cpp" "CMakeFiles/chaos_sim.dir/src/main.cpp.o" "gcc" "CMakeFiles/chaos_sim.dir/src/main.cpp.o.d"
   "/home/mdelic/Main/Programs/PersonalProjects/Chaos/src/running.cpp" "CMakeFiles/chaos_sim.dir/src/running.cpp.o" "gcc" "CMakeFiles/chaos_sim.dir/src/running.cpp.o.d"
+  "/home/mdelic/Main/Programs/PersonalProjects/Chaos/src/tick_handling.cpp" "CMakeFiles/chaos_sim.dir/src/tick_handling.cpp.o" "gcc" "CMakeFiles/chaos_sim.dir/src/tick_handling.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

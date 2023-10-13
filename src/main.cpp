@@ -1,8 +1,8 @@
-#include "running.hpp"
+#include "core.hpp"
 
 int main() {
-    App app;
+    ChaosSimulator app;
 
-    runApp(app);
+    app.runApp();
     LOG("Done running");
 }

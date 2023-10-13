@@ -1,32 +1,67 @@
-#include "running.hpp"
+#include "core.hpp"
 
 
 
 
-void display_anchors(App &app) {
+void ChaosSimulator::display() {
 
-    for (auto &position : app.Anchors) {
+    displayStatics();
+
+    displayAnchors();
+
+    displayMarker();
+
+    Window.display();
+
+}
+
+
+
+void ChaosSimulator::displayStatics() {
+
+    StaticTexture.update(StaticImage);
+    Window.draw(StaticSprite);
+
+}
+
+
+
+void ChaosSimulator::displayAnchors() {
+
+    for (auto &position : Anchors) {
         sf::CircleShape circle(ANCHOR_R);
         circle.setFillColor(sf::Color::Magenta);
         circle.setPosition(position);
 
-        app.Window.draw(circle);
+        Window.draw(circle);
     }
 
 }
 
 
 
-void runApp(App &app) {
-    while (app.Window.isOpen()) {
+void ChaosSimulator::displayMarker() {
 
-        app.Window.clear();
+    sf::CircleShape circle(MARKER_R);
+    circle.setFillColor(sf::Color::Red);
+    circle.setPosition(Marker);
 
-        handle_event(app);
+    Window.draw(circle);    
 
-        display_anchors(app);
+}
 
-        app.Window.display();
+
+
+void ChaosSimulator::runApp() {
+
+    while (Window.isOpen()) {
+
+        Window.clear();
+
+        handleEvent();
+        tick();
+
+        display();
 
     }
 }

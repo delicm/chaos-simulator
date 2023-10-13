@@ -1,19 +1,31 @@
-#include "action_handling.hpp"
+#include "core.hpp"
 
 
 
 
-void handle_keypress(App &app, sf::Event event) {
+void ChaosSimulator::handleKeypress(sf::Event &event) {
 
     sf::Keyboard::Key key = event.key.code;
 
     switch (key)
     {
     case sf::Keyboard::Backspace:
-        if (app.Anchors.size()) app.Anchors.pop_back();
-        LOG("Key Backspace pressed");
+        if (Anchors.size()) Anchors.pop_back();
+        LOG("Last anchor deleted");
         break;
-    
+
+    case sf::Keyboard::Space:
+        TPS = 10 - TPS;
+        LOG("Toggled ticking");
+        break;
+
+    case sf::Keyboard::C:
+        StaticImage.create(WIDTH, HEIGHT, sf::Color::Transparent);
+        StaticTexture.loadFromImage(StaticImage);
+        StaticSprite.setTexture(StaticTexture);
+        LOG("Cleared statics");
+        break;
+
     default:
         break;
     }
@@ -24,7 +36,7 @@ void handle_keypress(App &app, sf::Event event) {
 
 
 
-void handle_mouse(App &app, sf::Event &event) {
+void ChaosSimulator::handleClick(sf::Event &event) {
 
     sf::Vector2i mousePos = {
         event.mouseButton.x,
@@ -34,7 +46,7 @@ void handle_mouse(App &app, sf::Event &event) {
     switch (event.mouseButton.button)
     {
     case sf::Mouse::Left:
-        app.Anchors.push_back(
+        Anchors.push_back(
             static_cast<sf::Vector2f>(
                 mousePos
             ) - sf::Vector2f(ANCHOR_R, ANCHOR_R)
@@ -51,25 +63,25 @@ void handle_mouse(App &app, sf::Event &event) {
 
 
 
-void handle_event(App &app) {
+void ChaosSimulator::handleEvent() {
 
     static sf::Event event;
-    if (!app.Window.pollEvent(event)) return;
+    if (!Window.pollEvent(event)) return;
 
     switch (event.type)
     {
 
     case sf::Event::Closed:
-        app.Window.close();
+        Window.close();
         LOG("Window closed");
         break;
 
     case sf::Event::KeyPressed:
-        handle_keypress(app, event);
+        handleKeypress(event);
         break;
 
     case sf::Event::MouseButtonPressed:
-        handle_mouse(app, event);
+        handleClick(event);
         break;
 
 

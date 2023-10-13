@@ -15,30 +15,53 @@
 
 
 
-const int WIDTH = 1920;
-const int HEIGHT = 1080;
 
+class ChaosSimulator {
 
+private:
 
+    /*** Constants ***/
+    const int WIDTH = 1920;
+    const int HEIGHT = 1080;
 
-class App {
+    const int ANCHOR_R = 4;
+    const int MARKER_R = 3;
+    const int POINT_R = 2;
+
+    unsigned int TPS = 0;
+
+    /*** Running ***/
+    void displayStatics();
+    void displayAnchors();
+    void displayMarker();
+    void display();
+
+    /*** Action Handling ***/
+    void handleEvent();
+    void handleKeypress(sf::Event &event);
+    void handleClick(sf::Event &event);
+
+    /*** Tick handling ***/
+    void tick();
+    void drawStaticCircle(sf::Vector2f &position); // TODO
+
+    /*** Members ***/
+    sf::RenderWindow Window;
+    std::vector<sf::Vector2f> Anchors;
+    sf::Vector2f Marker;
+
+    sf::Image StaticImage;
+    sf::Texture StaticTexture;
+    sf::Sprite StaticSprite;
 
 public:
 
-    sf::RenderWindow Window;
-    std::vector<sf::Vector2f> Anchors;
+    ChaosSimulator();
+    ~ChaosSimulator();
 
-    App();
-    ~App();
+    void runApp();
 
 };
-
-
-
-
-
-
-
 
 
 #endif

@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/chaos_sim.dir/src/main.cpp.o.d"
   "CMakeFiles/chaos_sim.dir/src/running.cpp.o"
   "CMakeFiles/chaos_sim.dir/src/running.cpp.o.d"
+  "CMakeFiles/chaos_sim.dir/src/tick_handling.cpp.o"
+  "CMakeFiles/chaos_sim.dir/src/tick_handling.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

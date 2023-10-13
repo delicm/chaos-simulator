@@ -8,6 +8,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../bin)
 set(SOURCES
     src/core.cpp
     src/action_handling.cpp
+    src/tick_handling.cpp
     src/running.cpp
     src/main.cpp
 )

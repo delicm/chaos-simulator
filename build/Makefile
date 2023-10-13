@@ -225,6 +225,30 @@ src/running.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chaos_sim.dir/build.make CMakeFiles/chaos_sim.dir/src/running.cpp.s
 .PHONY : src/running.cpp.s
 
+src/tick_handling.o: src/tick_handling.cpp.o
+.PHONY : src/tick_handling.o
+
+# target to build an object file
+src/tick_handling.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chaos_sim.dir/build.make CMakeFiles/chaos_sim.dir/src/tick_handling.cpp.o
+.PHONY : src/tick_handling.cpp.o
+
+src/tick_handling.i: src/tick_handling.cpp.i
+.PHONY : src/tick_handling.i
+
+# target to preprocess a source file
+src/tick_handling.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chaos_sim.dir/build.make CMakeFiles/chaos_sim.dir/src/tick_handling.cpp.i
+.PHONY : src/tick_handling.cpp.i
+
+src/tick_handling.s: src/tick_handling.cpp.s
+.PHONY : src/tick_handling.s
+
+# target to generate assembly for a file
+src/tick_handling.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chaos_sim.dir/build.make CMakeFiles/chaos_sim.dir/src/tick_handling.cpp.s
+.PHONY : src/tick_handling.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -246,6 +270,9 @@ help:
 	@echo "... src/running.o"
 	@echo "... src/running.i"
 	@echo "... src/running.s"
+	@echo "... src/tick_handling.o"
+	@echo "... src/tick_handling.i"
+	@echo "... src/tick_handling.s"
 .PHONY : help
 
 
