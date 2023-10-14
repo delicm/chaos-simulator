@@ -14,16 +14,33 @@ void ChaosSimulator::handleKeypress(sf::Event &event) {
         LOG("Last anchor deleted");
         break;
 
+
     case sf::Keyboard::Space:
-        TPS = 10 - TPS;
+        TPS = BASE_TPS - TPS;
         LOG("Toggled ticking");
         break;
+
 
     case sf::Keyboard::C:
         StaticImage.create(WIDTH, HEIGHT, sf::Color::Transparent);
         StaticTexture.loadFromImage(StaticImage);
         StaticSprite.setTexture(StaticTexture);
         LOG("Cleared statics");
+        break;
+
+
+    case sf::Keyboard::Up:
+        BASE_TPS = 10 + BASE_TPS % MAX_TPS;
+        TPS = TPS == 0 ? 0 : BASE_TPS;
+        TPSIndicator.setString("TPS: " + std::to_string(BASE_TPS));
+        LOG("Increased base tickspeed");
+        break;
+
+    case sf::Keyboard::Down:
+        BASE_TPS = 10 + (BASE_TPS + MAX_TPS - 20) % MAX_TPS;
+        TPS = TPS == 0 ? 0 : BASE_TPS;
+        TPSIndicator.setString("TPS: " + std::to_string(BASE_TPS));
+        LOG("Decreased base tickspeed");
         break;
 
     default:
