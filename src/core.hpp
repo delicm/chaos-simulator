@@ -31,6 +31,7 @@ private:
     unsigned int TPS = 0;
     unsigned int BASE_TPS = 10;
     const int MAX_TPS = 80;
+    bool TICKLIM_DISABLED = true;
 
     /*** Running ***/
     void displayStatics();

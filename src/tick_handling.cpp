@@ -4,7 +4,11 @@ void ChaosSimulator::tick() {
 
     static sf::Clock tickLimiter;
 
-    if (TPS == 0 || tickLimiter.getElapsedTime() < sf::seconds(1.0f / TPS)) return;
+    if (
+        TPS == 0 ||
+        (tickLimiter.getElapsedTime() < sf::seconds(1.0f / TPS) && TICKLIM_DISABLED)
+    ) return;
+
 
     if (Anchors.size() == 0) return;
 

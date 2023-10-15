@@ -43,6 +43,11 @@ void ChaosSimulator::handleKeypress(sf::Event &event) {
         LOG("Decreased base tickspeed");
         break;
 
+    case sf::Keyboard::L:
+        TICKLIM_DISABLED = !TICKLIM_DISABLED;
+        LOG("Toggled ticklimit");
+        break;
+
     default:
         break;
     }
