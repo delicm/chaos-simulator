@@ -20,6 +20,13 @@ class ChaosSimulator {
 
 private:
 
+    enum Rule {
+        Standard,
+        NoRepeat,
+        NoNeighbor,
+        NoSecondNeighbor
+    };
+
     /*** Constants ***/
     const int WIDTH = 1920;
     const int HEIGHT = 1080;
@@ -32,6 +39,9 @@ private:
     unsigned int BASE_TPS = 10;
     const int MAX_TPS = 80;
     bool TICKLIM_DISABLED = true;
+
+    const int NUMRULES = 4;
+    Rule GameRule;
 
     /*** Running ***/
     void displayStatics();
@@ -47,7 +57,9 @@ private:
 
     /*** Tick handling ***/
     void tick();
-    void drawStaticCircle(sf::Vector2f &position); // TODO
+    void chooseAnchor();
+    sf::Vector2f choosePoint();
+    void drawStaticCircle(sf::Vector2f &position);
 
     /*** Members ***/
     sf::RenderWindow Window;
@@ -59,7 +71,10 @@ private:
     sf::Sprite StaticSprite;
 
     sf::Text TPSIndicator;
+    sf::Text GameRuleIndicator;
     sf::Font DisplayFont;
+
+    int LastAnchor = 0;
 
 public:
 

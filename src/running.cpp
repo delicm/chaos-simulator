@@ -30,6 +30,34 @@ void ChaosSimulator::displayStatics() {
 
 void ChaosSimulator::displayText() {
 
+    std::string gamerule;
+
+    switch (GameRule)
+    {
+    case Standard:
+        gamerule = "Standard";
+        break;
+    
+    case NoRepeat:
+        gamerule = "No Repeat";
+        break;
+
+    case NoNeighbor:
+        gamerule = "No Neighbor";
+        break;
+
+    case NoSecondNeighbor:
+        gamerule = "No Second Neighbor";
+        break;
+
+    default:
+        gamerule = "Error";
+        break;
+    }
+
+    GameRuleIndicator.setString("Game rule: " + gamerule);
+
+    Window.draw(GameRuleIndicator);
     Window.draw(TPSIndicator);
 
 }

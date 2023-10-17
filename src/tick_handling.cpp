@@ -1,5 +1,8 @@
 #include "core.hpp"
 
+
+
+
 void ChaosSimulator::tick() {
 
     static sf::Clock tickLimiter;
@@ -10,13 +13,11 @@ void ChaosSimulator::tick() {
     ) return;
 
 
-    if (Anchors.size() == 0) return;
+    if (Anchors.size() <= 2) return;
 
-    int anchor = rand() % Anchors.size();
+    chooseAnchor();
 
-    sf::Vector2f middle = Anchors[anchor] + Marker;
-    middle.x /= 2;
-    middle.y /= 2;
+    sf::Vector2f middle = choosePoint();
 
     drawStaticCircle(middle);
 
@@ -26,6 +27,54 @@ void ChaosSimulator::tick() {
 
 }
 
+
+
+void ChaosSimulator::chooseAnchor() {
+
+    if (GameRule == Standard) {
+        LastAnchor = rand() % Anchors.size();
+        return;
+    }
+
+    if (GameRule == NoRepeat) {
+        int anchor = rand() % Anchors.size();
+        while (anchor == LastAnchor) {
+            anchor = rand() % Anchors.size();
+        }
+        LastAnchor = anchor;
+        return;
+    }
+
+    if (GameRule == NoNeighbor) {
+        int anchor = rand() % Anchors.size();
+        while (anchor - LastAnchor == 1 || anchor - LastAnchor == -1) {
+            anchor = rand() % Anchors.size();
+        }
+        LastAnchor = anchor;
+        return;
+    }
+
+    if (GameRule == NoSecondNeighbor) {
+        int anchor = rand() % Anchors.size();
+        while (anchor - LastAnchor == 2 || anchor - LastAnchor == -2) {
+            anchor = rand() % Anchors.size();
+        }
+        LastAnchor = anchor;
+        return;
+    }
+
+}
+
+
+sf::Vector2f ChaosSimulator::choosePoint() {
+
+    sf::Vector2f middle = Anchors[LastAnchor] + Marker;
+    middle.x /= 2;
+    middle.y /= 2;
+
+    return middle;
+
+}
 
 
 

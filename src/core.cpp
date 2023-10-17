@@ -22,6 +22,13 @@ ChaosSimulator::ChaosSimulator()
     TPSIndicator.setPosition(WIDTH - 150, HEIGHT - 50);
     TPSIndicator.setString("TPS: " + std::to_string(BASE_TPS));
     LOG("TPS Indicator loaded");
+
+    GameRuleIndicator.setFont(DisplayFont);
+    GameRuleIndicator.setCharacterSize(24);
+    GameRuleIndicator.setFillColor(sf::Color::White);
+    GameRuleIndicator.setPosition(20, HEIGHT - 50);
+    GameRuleIndicator.setString("GameRule: Standard");
+    LOG("Game Rule Indicator loaded");
 }
 
 ChaosSimulator::~ChaosSimulator() {}

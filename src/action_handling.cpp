@@ -48,6 +48,13 @@ void ChaosSimulator::handleKeypress(sf::Event &event) {
         LOG("Toggled ticklimit");
         break;
 
+    case sf::Keyboard::R:
+        GameRule = static_cast<Rule>(
+            (GameRule + 1) % NUMRULES
+        );
+        LOG("Game rule toggled");
+        break;
+
     default:
         break;
     }
